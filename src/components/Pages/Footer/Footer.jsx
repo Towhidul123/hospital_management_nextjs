@@ -43,7 +43,7 @@ const Footer = () => {
         </nav>
         
       </footer>
-      <div className='pt-14'>
+      <div className='pt-15'>
       <hr></hr>
       <div className='flex justify-center items-center align-middle px-5'>
           <p className='py-5'>Copyright © 2022 - All right reserved by Doc House Ltd</p>
