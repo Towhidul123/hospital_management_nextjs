@@ -1,19 +1,16 @@
-import { auth } from "@clerk/nextjs";
-import Image from "next/image";
-import { redirect } from "next/navigation";
+import Banner from '../../components/Pages/Home/Banner/Banner';
+import DoctorContainer from '../../components/Pages/Home/DoctorContainer/DoctorContainer';
+import MiniContact from '../../components/Pages/Home/MiniContact/MiniContact';
+import React from 'react';
 
-export default function Home() {
-
-  // const { userId } = auth();
-
-  // if (userId) {
-  //   redirect('/dashboard')
-  // }
-
-
+function page(props) {
   return (
-    <main className="font-bold text-center m-10">
-      <h1>Home</h1>
-    </main>
+    <div>
+      <Banner></Banner>
+      <DoctorContainer></DoctorContainer>
+      <MiniContact></MiniContact>
+    </div>
   );
 }
+
+export default page;
