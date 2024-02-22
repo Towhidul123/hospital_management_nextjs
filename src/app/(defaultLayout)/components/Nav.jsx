@@ -29,7 +29,7 @@ const Nav = () => {
 
                                 ) : (
                                     <div>
-                                        <Link href='/sign-up'>Sign up</Link>
+                                        <Link className='text-lg' href='/sign-up'>Sign up</Link>
                                     </div>
                                 )
                         }
