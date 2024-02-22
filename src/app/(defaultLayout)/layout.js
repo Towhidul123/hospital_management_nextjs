@@ -1,6 +1,7 @@
 import { Inter } from "next/font/google";
 import "./globals.css";
 import Header from "../../components/Shared/Header/Header";
+import Footer from "../../components/Pages/Footer/Footer";
 import { ClerkProvider } from "@clerk/nextjs";
 import Nav from "./components/nav";
 
@@ -19,7 +20,7 @@ export default function RootLayout({ children }) {
           <Header></Header>
 
           {children}
-
+          <Footer></Footer>
         </body>
       </html>
     </ClerkProvider>
