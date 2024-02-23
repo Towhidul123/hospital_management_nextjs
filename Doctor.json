@@ -1,0 +1,82 @@
+[
+    {
+        "name" : "Karyen Anderson",
+        "image" : "https://i.postimg.cc/ZnQhcd7z/Rectangle-15-2.png",
+        "degree" : "MBBS",
+        "ratiing" : "5",
+        "specialist" : "Cardiologist",
+        "phone" : "0134678899900",
+        "address" : "Dhanmondi,Dhaka,Bangladesh",
+        "about" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+        "work_experience" : "Glowing Smiles Family Dental Clinic",
+        "award" : "Humanitarian Award",
+        "servicee" : "Teeth Orthodontics"
+
+    },
+    {
+        "name" : "Stive Smith",
+        "image" : "https://i.postimg.cc/nrg67trH/Rectangle-15-1.png",
+        "degree" : "MBBS",
+        "ratiing" : "5",
+        "specialist" : "Psychiatrist",
+        "phone" : "0134678899900",
+        "address" : "Mirpur,Dhaka,Bangladesh",
+        "about" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+        "work_experience" : "Glowing Smiles Family Dental Clinic",
+        "award" : "fathers of humanity",
+        "servicee" : "Cosmetic Dentisty"
+
+    }, {
+        "name" : "Alan walkner",
+        "image" : "https://i.postimg.cc/9Xk3sypv/Rectangle-15.png",
+        "degree" : "MBBS",
+        "ratiing" : "5",
+        "specialist" : "Endocrinologist",
+        "phone" : "0134678899900",
+        "address" : "KillKhet,Dhaka,Bangladesh",
+        "about" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+        "work_experience" : "Glowing Smiles Family Dental Clinic",
+        "award" : "fathers of humanity",
+        "servicee" : "Teeth Cleaning"
+
+    },{
+        "name" : "Hridoy Ahmed",
+        "image" : "https://i.postimg.cc/hGqVScx9/istockphoto-177373093-612x612.jpg",
+        "degree" : "MBBS",
+        "ratiing" : "5",
+        "specialist" : "Gastroenterologist",
+        "phone" : "0134678899900",
+        "address" : "KillKhet,Dhaka,Bangladesh",
+        "about" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+        "work_experience" : "Glowing Smiles Family Dental Clinic",
+        "award" : "fathers of humanity",
+        "servicee" : "Teeth Cleaning"
+
+    },{
+        "name" : "Stive switch",
+        "image" : "https://i.postimg.cc/FKg3z8gw/images.jpg",
+        "degree" : "MBBS",
+        "ratiing" : "5",
+        "specialist" : "General Surgery",
+        "phone" : "0134678899900",
+        "address" : "KillKhet,Dhaka,Bangladesh",
+        "about" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+        "work_experience" : "Glowing Smiles Family Dental Clinic",
+        "award" : "fathers of humanity",
+        "servicee" : "Teeth Cleaning"
+
+    },{
+        "name" : "James pathirana",
+        "image" : "https://i.postimg.cc/3R8pv1tN/desktop-wallpaper-doctor-female-doctor.jpg",
+        "degree" : "MBBS",
+        "ratiing" : "5",
+        "specialist" : "Pulmonologists",
+        "phone" : "0134678899900",
+        "address" : "KillKhet,Dhaka,Bangladesh",
+        "about" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+        "work_experience" : "Glowing Smiles Family Dental Clinic",
+        "award" : "fathers of humanity",
+        "servicee" : "Teeth Cleaning"
+
+    }
+]
