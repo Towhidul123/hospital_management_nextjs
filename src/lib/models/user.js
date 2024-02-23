@@ -15,7 +15,39 @@ const userModel = new mongoose.Schema({
   },
   password: {
     type: String,
-    required: true,
+  },
+  image: {
+    type: String,
+  },
+  degree: {
+    type: String,
+  },
+  degree: {
+    type: String,
+  },
+  rating: {
+    type: String,
+  },
+  specialist: {
+    type: String,
+  },
+  phone: {
+    type: String,
+  },
+  address: {
+    type: String,
+  },
+  about: {
+    type: String,
+  },
+  work_experience: {
+    type: String,
+  },
+  award: {
+    type: String,
+  },
+  service: {
+    type: String,
   },
 });
 

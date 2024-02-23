@@ -4,13 +4,35 @@ import mongoose from "mongoose";
 import { NextResponse } from "next/server";
 
 export async function GET() {
-  console.log("connecting to database");
-  await mongoose.connect(URI, { dbName: process.env.DB_NAME });
-  console.log("connected to database");
+  let data = [];
+  try {
+    await mongoose.connect(URI, { dbName: process.env.DB_NAME });
+    const users = await User.find();
+    data = { users, success: true };
+  } catch (error) {
+    data = { success: false };
+  }
 
-  const books = await User.find();
+  return NextResponse.json(data);
+}
 
-  //   console.log(existingUser);
+export async function POST(request) {
+  let data = [];
+  try {
+    const payload = await request.json();
+    await mongoose.connect(URI, { dbName: process.env.DB_NAME });
+    const query = { email: payload.email };
+    const existingUser = await User.findOne(query);
+    if (existingUser) {
+      data = { message: "User already exists", insertedId: null };
+    } else {
+      let user = new User(payload);
+      const result = await User.create(user);
+      data = { user: result, success: true };
+    }
+  } catch (error) {
+    data = { success: false };
+  }
 
-  return NextResponse.json({ result: books });
+  return NextResponse.json(data);
 }
