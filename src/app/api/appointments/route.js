@@ -13,6 +13,10 @@ export async function GET(request) {
 
     // Building the filter based on the presence of patientEmail or doctorEmail
     let filter = {};
+    if (patientEmail && doctorEmail) {
+      filter.patientEmail = patientEmail;
+      filter.doctorEmail = doctorEmail;
+    }
     if (patientEmail) {
       filter.patientEmail = patientEmail;
     }

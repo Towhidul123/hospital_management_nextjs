@@ -3,11 +3,30 @@ import { User } from "../../../lib/models/user";
 import mongoose from "mongoose";
 import { NextResponse } from "next/server";
 
-export async function GET() {
+export async function GET(request) {
   let data = [];
   try {
+    // Extracting query parameters from the request
+    const searchParams = request.nextUrl.searchParams;
+    const role = searchParams.get("role");
+    const specialist = searchParams.get("specialist");
+
+    // Building the filter based on the presence of patientEmail or doctorEmail
+    let filter = {};
+    if (role && specialist) {
+      filter.role = role;
+      filter.specialist = specialist;
+    }
+    if (role) {
+      filter.role = role;
+    }
+    if (specialist) {
+      filter.specialist = specialist;
+    }
     await mongoose.connect(URI, { dbName: process.env.DB_NAME });
-    const users = await User.find();
+    // Querying appointments with the filter
+    const users = await User.find(filter);
+
     data = { users, success: true };
   } catch (error) {
     data = { success: false };
