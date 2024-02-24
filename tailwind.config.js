@@ -1,5 +1,3 @@
-
-
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   darkMode: ["class"],
@@ -26,7 +24,7 @@ module.exports = {
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
         primary: {
-          DEFAULT: "#0D7DFF",
+          DEFAULT: "hsl(var(--primary))",
           foreground: "hsl(var(--primary-foreground))",
         },
         secondary: {
@@ -75,12 +73,8 @@ module.exports = {
       },
     },
   },
-
   plugins: [
     require('daisyui'),
     require('tailwindcss-animate'),
   ],
-  daisyui: {
-    themes: ["cupcake"],
-  },
 }
