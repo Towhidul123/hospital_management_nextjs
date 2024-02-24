@@ -114,7 +114,7 @@ function DoctorCarousel(props) {
                                 
                             </div>
                             <div className="card-actions">
-                            <button  onClick={()=>router.push('/33')} className='py-2 px-7 rounded-md border my-5 border-red-200 hover:bg-[#F7A582] hover:text-white'>View profile</button>
+                            <button  onClick={()=>router.push(`/doctor/55`)} className='py-2 px-7 rounded-md border my-5 border-red-200 hover:bg-[#F7A582] hover:text-white'>View profile</button>
                             </div>
                         </div>
                     </div>)
