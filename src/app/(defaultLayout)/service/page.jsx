@@ -1,9 +1,10 @@
 import React from 'react'
-import { Button } from '.././../../../@/components/ui/button'
+
+import BookAppointment from '../components/BookAppointment'
 export default function page() {
     return (
         <div>
-            page
+            <BookAppointment></BookAppointment>
 
         </div>
     )
