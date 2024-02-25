@@ -1,5 +1,5 @@
 import { URI } from "../../../lib/db";
-import { User } from "../../../lib/models/user";
+import { Appointment } from "../../../lib/models/appointment";
 import mongoose from "mongoose";
 import { NextResponse } from "next/server";
 
@@ -8,26 +8,26 @@ export async function GET(request) {
   try {
     // Extracting query parameters from the request
     const searchParams = request.nextUrl.searchParams;
-    const role = searchParams.get("role");
-    const specialist = searchParams.get("specialist");
+    const patientEmail = searchParams.get("patientEmail");
+    const doctorEmail = searchParams.get("doctorEmail");
 
     // Building the filter based on the presence of patientEmail or doctorEmail
     let filter = {};
-    if (role && specialist) {
-      filter.role = role;
-      filter.specialist = specialist;
+    if (patientEmail && doctorEmail) {
+      filter.patientEmail = patientEmail;
+      filter.doctorEmail = doctorEmail;
     }
-    if (role) {
-      filter.role = role;
+    if (patientEmail) {
+      filter.patientEmail = patientEmail;
     }
-    if (specialist) {
-      filter.specialist = specialist;
+    if (doctorEmail) {
+      filter.doctorEmail = doctorEmail;
     }
     await mongoose.connect(URI, { dbName: process.env.DB_NAME });
     // Querying appointments with the filter
-    const users = await User.find(filter);
+    const appointments = await Appointment.find(filter);
 
-    data = { users, success: true };
+    data = { appointments, success: true };
   } catch (error) {
     data = { success: false };
   }
@@ -40,15 +40,10 @@ export async function POST(request) {
   try {
     const payload = await request.json();
     await mongoose.connect(URI, { dbName: process.env.DB_NAME });
-    const query = { email: payload.email };
-    const existingUser = await User.findOne(query);
-    if (existingUser) {
-      data = { message: "User already exists", insertedId: null };
-    } else {
-      let user = new User(payload);
-      const result = await User.create(user);
-      data = { user: result, success: true };
-    }
+
+    let appointment = new Appointment(payload);
+    const result = await Appointment.create(appointment);
+    data = { appointment: result, success: true };
   } catch (error) {
     data = { success: false };
   }

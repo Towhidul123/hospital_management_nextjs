@@ -22,9 +22,6 @@ const userModel = new mongoose.Schema({
   degree: {
     type: String,
   },
-  degree: {
-    type: String,
-  },
   rating: {
     type: String,
   },
