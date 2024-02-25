@@ -3,14 +3,17 @@ import mongoose from "mongoose";
 const appointmentModel = new mongoose.Schema({
   patientName: {
     type: String,
-  },
-  patientFirstName: {
-    type: String,
-  },
-  patientLastName: {
-    type: String,
+    required: true,
   },
   patientEmail: {
+    type: String,
+    required: true,
+  },
+  date: {
+    type: Date,
+    required: true,
+  },
+  time: {
     type: String,
     required: true,
   },
@@ -22,16 +25,6 @@ const appointmentModel = new mongoose.Schema({
     type: String,
     required: true,
   },
-  date: {
-    type: String,
-    required: true,
-  },
-  time: {
-    type: String,
-    required: true,
-  },
 });
 
-export const Appointment =
-  mongoose.models.appointments ||
-  mongoose.model("appointments", appointmentModel);
+export const Appointment = mongoose.models.appointments || mongoose.model("appointments", appointmentModel);

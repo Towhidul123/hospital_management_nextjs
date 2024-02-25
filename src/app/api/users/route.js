@@ -10,6 +10,7 @@ export async function GET(request) {
     const searchParams = request.nextUrl.searchParams;
     const role = searchParams.get("role");
     const specialist = searchParams.get("specialist");
+    const _id = searchParams.get("_id");
 
     // Building the filter based on the presence of patientEmail or doctorEmail
     let filter = {};
@@ -22,6 +23,9 @@ export async function GET(request) {
     }
     if (specialist) {
       filter.specialist = specialist;
+    }
+    if (_id) {
+      filter._id = _id;
     }
     await mongoose.connect(URI, { dbName: process.env.DB_NAME });
     // Querying appointments with the filter

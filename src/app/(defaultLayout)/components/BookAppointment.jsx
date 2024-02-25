@@ -18,7 +18,7 @@ import { useUser } from '@clerk/nextjs';
 import { toast } from 'sonner'
 
 
-function BookAppointment() {
+function BookAppointment({ doctor }) {
     const [date, setDate] = useState(new Date());
     const [timeSlot, setTimeSlot] = useState();
     const [selectedTimeSlot, setSelectedTimeSlot] = useState();
@@ -66,35 +66,49 @@ function BookAppointment() {
         return day <= new Date();
     }
 
-    const saveBooking = () => {
-        const data = {
-            data: {
-                UserName: user.firstName + " " + user.lastName,
-                Email: user.emailAddresses[0].emailAddress,
-                Time: selectedTimeSlot,
-                Date: date,
-                //   doctor: doctor.id,
+    const saveBooking = async () => {
+        const bookingData = {
+            patientName: user.firstName + " " + user.lastName,
+            patientEmail: user.emailAddresses[0].emailAddress,
+            time: selectedTimeSlot,
+            date: date,
+
+            doctorName: doctor?.name,
+            doctorEmail: doctor?.email
+        };
+        console.log(bookingData);
+        //    console.log(doctor.name)
+        //   console.log(doctor.email)
+
+        try {
+            const response = await fetch('http://localhost:3000/api/appointments', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(bookingData),
+            });
+
+            const result = await response.json();
+            if (result.success) {
+                toast("Booking Confirmation sent on Email");
+            } else {
+                toast("Booking failed");
             }
+        } catch (error) {
+            console.error('Error:', error);
+            toast("Booking failed");
         }
-        console.log(data)
-        // GlobalApi.bookAppointment(data).then(resp=>{
-        //   console.log(resp);
-        //   if(resp)
-        //   {
-        //     GlobalApi.sendEmail(data).then(resp=>{
-        //       console.log(resp)
-        //     })
-        toast("Booking Confirmation sent on Email")
-        //   }
-        // })
-    }
+    };
+
+
 
 
 
     return (
         <Dialog>
             <DialogTrigger>
-                <Button className="mt-3 rounded-full">Book Appointment</Button>
+                <Button className="py-2 px-10 bg-[#102F23] rounded-md mt-7 text-white">Book Appointment</Button>
             </DialogTrigger>
             <DialogContent>
                 <DialogHeader>
