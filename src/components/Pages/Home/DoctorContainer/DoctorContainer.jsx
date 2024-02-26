@@ -12,11 +12,11 @@ const DoctorContainer = () => {
                 <div>
                     <h1 className='text-3xl font-semibold'>Our Services</h1>
                     <p className='py-5 font-[10px]'>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inve ntore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
-                      <div className='flex justify-between items-center align-middle my-5'>
+                    <div className='flex justify-between items-center align-middle my-5'>
                         <button className='py-3 lg:px-5 md:px-1 px-2 bg-[#F7A582] text-white rounded-md text-[10px] xl:text-sm'>Cavity Protection</button>
                         <button className='py-3 lg:px-5 md:px-1 px-2 bg-[#F7A582] text-white rounded-md text-[10px] xl:text-sm'>Cavity Protection</button>
                         <button className='py-3 lg:px-5 md:px-1 px-2 bg-[#F7A582] text-white rounded-md text-[10px] xl:text-sm'>Cavity Protection</button>
-                      </div>
+                    </div>
                     <Image src={teeth} className='w-full h-[300px] my-5' width={200} height={500}></Image>
                     <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inve ntore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Sed ut perspiciatis unde omnis iste natus error </p>
                     <p className='pt-3'>Sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inve ntore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>

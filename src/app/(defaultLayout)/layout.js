@@ -3,7 +3,7 @@ import "./globals.css";
 import Header from "../../components/Shared/Header/Header";
 import Footer from "../../components/Pages/Footer/Footer";
 import { ClerkProvider } from "@clerk/nextjs";
-import Nav from "./components/nav";
+
 import { Toaster } from "sonner";
 
 const inter = Inter({ subsets: ["latin"] });
