@@ -15,7 +15,7 @@ function Doctor(props) {
 
 
     useEffect(() => {
-        fetch(`http://localhost:3000/api/users?_id=${id}`)
+        fetch(`https://nextjs-team1.vercel.app/api/users?_id=${id}`)
             .then(response => response.json())
             .then(data => {
                 if (data.success && data.users.length > 0) {
