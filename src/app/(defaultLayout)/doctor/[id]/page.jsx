@@ -12,13 +12,13 @@ function page(props) {
     const { id } = useParams();
     console.log(id, 'idd')
 
-    // Fetch doctor data when component mounts or id changes
+
     useEffect(() => {
         fetch(`http://localhost:3000/api/users?_id=${id}`)
             .then(response => response.json())
             .then(data => {
                 if (data.success && data.users.length > 0) {
-                    // Assuming the first element in the 'users' array is the doctor's data
+
                     setDoctor(data.users[0]);
                 } else {
                     console.error('No doctor found or unexpected response structure:', data);

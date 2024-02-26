@@ -99,6 +99,27 @@ function BookAppointment({ doctor }) {
             console.error('Error:', error);
             toast("Booking failed");
         }
+
+        // try {
+        //     // Update the fetch URL to the email sending API route
+        //     const response = await fetch('/api/sendEmail', {
+        //         method: 'POST',
+        //         headers: {
+        //             'Content-Type': 'application/json',
+        //         },
+        //         body: JSON.stringify(bookingData),
+        //     });
+
+        //     const result = await response.json();
+        //     if (result.success) {
+        //         toast("Booking confirmation sent via email.");
+        //     } else {
+        //         toast("Booking failed. Please try again.");
+        //     }
+        // } catch (error) {
+        //     console.error('Error:', error);
+        //     toast("An error occurred while sending the booking confirmation.");
+        // }
     };
 
 
