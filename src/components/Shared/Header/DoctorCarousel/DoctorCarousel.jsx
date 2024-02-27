@@ -9,7 +9,7 @@ function DoctorCarousel(props) {
 
 
     useEffect(() => {
-        fetch('https://nextjs-team1.vercel.app/api/users?role=doctor')
+        fetch('http://localhost:3000/api/users?role=doctor')
             .then(response => response.json())
             .then(data => {
 

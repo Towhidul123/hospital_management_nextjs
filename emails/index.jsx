@@ -18,7 +18,7 @@ import * as React from "react";
 
 const baseUrl = process.env.VERCEL_URL
     ? `https://${process.env.VERCEL_URL}`
-    : "https://nextjs-team1.vercel.app";
+    : "http://localhost:3000";
 
 export const YelpRecentLoginEmail = ({
     userFirstName,

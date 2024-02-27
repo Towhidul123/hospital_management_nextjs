@@ -81,7 +81,7 @@ function BookAppointment({ doctor }) {
         //   console.log(doctor.email)
 
         try {
-            const response = await fetch('https://nextjs-team1.vercel.app/api/appointments', {
+            const response = await fetch('http://localhost:3000/api/appointments', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

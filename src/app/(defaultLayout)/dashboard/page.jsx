@@ -10,7 +10,7 @@ export default function Page() {
     useEffect(() => {
 
         if (user && user.emailAddresses.length > 0) {
-            fetch(`https://nextjs-team1.vercel.app/api/appointments?patientEmail=${user.emailAddresses[0].emailAddress}`)
+            fetch(`http://localhost:3000/api/appointments?patientEmail=${user.emailAddresses[0].emailAddress}`)
                 .then(response => response.json())
 
                 .then(data => {
